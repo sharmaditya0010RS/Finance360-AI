@@ -1,0 +1,203 @@
+{
+  "model": "xgboost_challenger",
+  "importance_type": "gain",
+  "aggregation": "sum_of_encoded_column_gain_scores",
+  "training_rows": 246008,
+  "held_out_test_rows": 61503,
+  "test_set_evaluated": false,
+  "feature_count": 24,
+  "feature_importance": [
+    {
+      "feature": "EXT_SOURCE_MEAN",
+      "total_gain": 438.3438415527344,
+      "normalized_gain": 0.31946320614764123,
+      "encoded_columns": 1,
+      "used_encoded_columns": 1,
+      "rank": 1
+    },
+    {
+      "feature": "NAME_EDUCATION_TYPE",
+      "total_gain": 143.33407020568848,
+      "normalized_gain": 0.10446128650034117,
+      "encoded_columns": 5,
+      "used_encoded_columns": 5,
+      "rank": 2
+    },
+    {
+      "feature": "NAME_INCOME_TYPE",
+      "total_gain": 123.82415533065796,
+      "normalized_gain": 0.09024254001227174,
+      "encoded_columns": 8,
+      "used_encoded_columns": 5,
+      "rank": 3
+    },
+    {
+      "feature": "EXT_SOURCE_3",
+      "total_gain": 72.60202026367188,
+      "normalized_gain": 0.05291205662675735,
+      "encoded_columns": 1,
+      "used_encoded_columns": 1,
+      "rank": 4
+    },
+    {
+      "feature": "NAME_FAMILY_STATUS",
+      "total_gain": 60.2848687171936,
+      "normalized_gain": 0.04393536675310495,
+      "encoded_columns": 6,
+      "used_encoded_columns": 5,
+      "rank": 5
+    },
+    {
+      "feature": "NAME_HOUSING_TYPE",
+      "total_gain": 58.37621879577637,
+      "normalized_gain": 0.042544350465184684,
+      "encoded_columns": 6,
+      "used_encoded_columns": 6,
+      "rank": 6
+    },
+    {
+      "feature": "NAME_CONTRACT_TYPE",
+      "total_gain": 56.3886775970459,
+      "normalized_gain": 0.04109583853571897,
+      "encoded_columns": 2,
+      "used_encoded_columns": 2,
+      "rank": 7
+    },
+    {
+      "feature": "FLAG_OWN_CAR",
+      "total_gain": 51.10945510864258,
+      "normalized_gain": 0.03724836269087091,
+      "encoded_columns": 2,
+      "used_encoded_columns": 2,
+      "rank": 8
+    },
+    {
+      "feature": "CREDIT_TO_GOODS_RATIO",
+      "total_gain": 50.61829376220703,
+      "normalized_gain": 0.03689040630231465,
+      "encoded_columns": 1,
+      "used_encoded_columns": 1,
+      "rank": 9
+    },
+    {
+      "feature": "EMPLOYMENT_YEARS",
+      "total_gain": 41.21809768676758,
+      "normalized_gain": 0.030039581693854657,
+      "encoded_columns": 1,
+      "used_encoded_columns": 1,
+      "rank": 10
+    },
+    {
+      "feature": "EXT_SOURCE_AVAILABLE_COUNT",
+      "total_gain": 39.26005935668945,
+      "normalized_gain": 0.02861257133488403,
+      "encoded_columns": 1,
+      "used_encoded_columns": 1,
+      "rank": 11
+    },
+    {
+      "feature": "EXT_SOURCE_2",
+      "total_gain": 37.66769790649414,
+      "normalized_gain": 0.027452064796401946,
+      "encoded_columns": 1,
+      "used_encoded_columns": 1,
+      "rank": 12
+    },
+    {
+      "feature": "AMT_GOODS_PRICE",
+      "total_gain": 33.352745056152344,
+      "normalized_gain": 0.02430734473585957,
+      "encoded_columns": 1,
+      "used_encoded_columns": 1,
+      "rank": 13
+    },
+    {
+      "feature": "AGE_YEARS",
+      "total_gain": 28.55186653137207,
+      "normalized_gain": 0.0208084840231851,
+      "encoded_columns": 1,
+      "used_encoded_columns": 1,
+      "rank": 14
+    },
+    {
+      "feature": "AMT_ANNUITY",
+      "total_gain": 27.833106994628906,
+      "normalized_gain": 0.02028465500064472,
+      "encoded_columns": 1,
+      "used_encoded_columns": 1,
+      "rank": 15
+    },
+    {
+      "feature": "AMT_CREDIT",
+      "total_gain": 21.831951141357422,
+      "normalized_gain": 0.015911037060247234,
+      "encoded_columns": 1,
+      "used_encoded_columns": 1,
+      "rank": 16
+    },
+    {
+      "feature": "EXT_SOURCE_1",
+      "total_gain": 21.700885772705078,
+      "normalized_gain": 0.015815517153462907,
+      "encoded_columns": 1,
+      "used_encoded_columns": 1,
+      "rank": 17
+    },
+    {
+      "feature": "ANNUITY_TO_INCOME_RATIO",
+      "total_gain": 13.36281967163086,
+      "normalized_gain": 0.009738768543776602,
+      "encoded_columns": 1,
+      "used_encoded_columns": 1,
+      "rank": 18
+    },
+    {
+      "feature": "CREDIT_TO_INCOME_RATIO",
+      "total_gain": 11.878561019897461,
+      "normalized_gain": 0.008657046884461166,
+      "encoded_columns": 1,
+      "used_encoded_columns": 1,
+      "rank": 19
+    },
+    {
+      "feature": "CNT_FAM_MEMBERS",
+      "total_gain": 8.842529296875,
+      "normalized_gain": 0.006444399331875394,
+      "encoded_columns": 1,
+      "used_encoded_columns": 1,
+      "rank": 20
+    },
+    {
+      "feature": "AMT_INCOME_TOTAL",
+      "total_gain": 8.518810272216797,
+      "normalized_gain": 0.006208474225360911,
+      "encoded_columns": 1,
+      "used_encoded_columns": 1,
+      "rank": 21
+    },
+    {
+      "feature": "CNT_CHILDREN",
+      "total_gain": 8.101653099060059,
+      "normalized_gain": 0.005904451776837231,
+      "encoded_columns": 1,
+      "used_encoded_columns": 1,
+      "rank": 22
+    },
+    {
+      "feature": "INCOME_PER_FAMILY_MEMBER",
+      "total_gain": 8.068164825439453,
+      "normalized_gain": 0.005880045659435668,
+      "encoded_columns": 1,
+      "used_encoded_columns": 1,
+      "rank": 23
+    },
+    {
+      "feature": "FLAG_OWN_REALTY",
+      "total_gain": 7.055670261383057,
+      "normalized_gain": 0.005142143745507212,
+      "encoded_columns": 2,
+      "used_encoded_columns": 1,
+      "rank": 24
+    }
+  ]
+}

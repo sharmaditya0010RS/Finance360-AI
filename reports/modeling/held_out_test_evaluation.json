@@ -1,0 +1,109 @@
+{
+  "evaluation_type": "single_held_out_test",
+  "model_name": "xgboost_challenger",
+  "model_version": "1.0.0",
+  "selection_status": "provisional",
+  "training_rows": 246008,
+  "test_rows": 61503,
+  "test_positive_count": 4965,
+  "test_positive_rate": 0.08072776937710356,
+  "decision_threshold": 0.5,
+  "roc_auc": 0.7520874855104627,
+  "average_precision": 0.24172168655610254,
+  "brier_score": 0.06797759928860961,
+  "expected_calibration_error": 0.001660792992784328,
+  "precision": 0.6086956521739131,
+  "recall": 0.014098690835850957,
+  "f1_score": 0.027559055118110236,
+  "confusion_matrix": {
+    "true_negative": 56493,
+    "false_positive": 45,
+    "false_negative": 4895,
+    "true_positive": 70
+  },
+  "calibration": {
+    "rows": 61503,
+    "positive_count": 4965,
+    "observed_positive_rate": 0.08072776937710356,
+    "mean_predicted_probability": 0.08049665947934362,
+    "brier_score": 0.06797759928860961,
+    "expected_calibration_error": 0.001660792992784328,
+    "binning_strategy": "equal_width",
+    "requested_bins": 10,
+    "populated_bins": 7,
+    "bins": [
+      {
+        "bin": 1,
+        "lower_bound": 0.0,
+        "upper_bound": 0.1,
+        "count": 45698,
+        "mean_predicted_probability": 0.045483816228885435,
+        "observed_positive_rate": 0.044575254934570444,
+        "absolute_calibration_gap": 0.0009085612943149912
+      },
+      {
+        "bin": 2,
+        "lower_bound": 0.1,
+        "upper_bound": 0.2,
+        "count": 11120,
+        "mean_predicted_probability": 0.13861919655297086,
+        "observed_positive_rate": 0.13839928057553957,
+        "absolute_calibration_gap": 0.00021991597743128977
+      },
+      {
+        "bin": 3,
+        "lower_bound": 0.2,
+        "upper_bound": 0.3,
+        "count": 3181,
+        "mean_predicted_probability": 0.24016149973520803,
+        "observed_positive_rate": 0.25369380697893745,
+        "absolute_calibration_gap": 0.013532307243729419
+      },
+      {
+        "bin": 4,
+        "lower_bound": 0.3,
+        "upper_bound": 0.4,
+        "count": 1080,
+        "mean_predicted_probability": 0.33948585413120413,
+        "observed_positive_rate": 0.3453703703703704,
+        "absolute_calibration_gap": 0.005884516239166249
+      },
+      {
+        "bin": 5,
+        "lower_bound": 0.4,
+        "upper_bound": 0.5,
+        "count": 309,
+        "mean_predicted_probability": 0.44060803375969426,
+        "observed_positive_rate": 0.44983818770226536,
+        "absolute_calibration_gap": 0.009230153942571095
+      },
+      {
+        "bin": 6,
+        "lower_bound": 0.5,
+        "upper_bound": 0.6,
+        "count": 96,
+        "mean_predicted_probability": 0.5423529154310623,
+        "observed_positive_rate": 0.59375,
+        "absolute_calibration_gap": 0.05139708456893766
+      },
+      {
+        "bin": 7,
+        "lower_bound": 0.6,
+        "upper_bound": 0.7,
+        "count": 19,
+        "mean_predicted_probability": 0.632049096258063,
+        "observed_positive_rate": 0.6842105263157895,
+        "absolute_calibration_gap": 0.05216143005772644
+      }
+    ]
+  },
+  "model_artifact_sha256": "d0201edd7f37527fa6b6af85adc999e3631fee25f5cb70583ceafaf922e029e3",
+  "test_set_evaluated": true,
+  "limitations": [
+    "TARGET indicates repayment difficulty, not necessarily formal default.",
+    "Predicted probabilities are not regulatory probability-of-default estimates.",
+    "The dataset has no event dates, so temporal validation is unavailable.",
+    "The 0.50 threshold is illustrative and not a credit decision policy.",
+    "Evaluation does not establish fairness, causal validity, or production readiness."
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "model": "xgboost_challenger",
+  "explanation_method": "tree_shap",
+  "sampling_strategy": "random_training_sample",
+  "random_state": 42,
+  "training_rows": 246008,
+  "held_out_test_rows": 61503,
+  "test_set_evaluated": false,
+  "sample_rows": 500,
+  "transformed_feature_count": 48,
+  "source_feature_count": 24,
+  "shap_output_space": "raw_log_odds",
+  "expected_value_log_odds": -2.4425876140594482,
+  "maximum_probability_reconstruction_error": 2.546127796793085e-07,
+  "global_feature_importance": [
+    {
+      "feature": "EXT_SOURCE_MEAN",
+      "mean_absolute_shap": 0.5192733563871589,
+      "mean_signed_shap": -0.1510525375774596,
+      "rank": 1
+    },
+    {
+      "feature": "EXT_SOURCE_3",
+      "mean_absolute_shap": 0.1345409918173682,
+      "mean_signed_shap": -0.03784017779608257,
+      "rank": 2
+    },
+    {
+      "feature": "CREDIT_TO_GOODS_RATIO",
+      "mean_absolute_shap": 0.12970635492820293,
+      "mean_signed_shap": -0.014931632795371115,
+      "rank": 3
+    },
+    {
+      "feature": "EMPLOYMENT_YEARS",
+      "mean_absolute_shap": 0.12318196757836267,
+      "mean_signed_shap": -0.019102654199581594,
+      "rank": 4
+    },
+    {
+      "feature": "AMT_GOODS_PRICE",
+      "mean_absolute_shap": 0.11958133490732871,
+      "mean_signed_shap": -0.01973166371998377,
+      "rank": 5
+    },
+    {
+      "feature": "NAME_EDUCATION_TYPE",
+      "mean_absolute_shap": 0.10748892517046625,
+      "mean_signed_shap": -0.014318419431619987,
+      "rank": 6
+    },
+    {
+      "feature": "AMT_ANNUITY",
+      "mean_absolute_shap": 0.10244457886405871,
+      "mean_signed_shap": 0.010802103657828412,
+      "rank": 7
+    },
+    {
+      "feature": "AGE_YEARS",
+      "mean_absolute_shap": 0.08394670968025457,
+      "mean_signed_shap": -0.002058116168831475,
+      "rank": 8
+    },
+    {
+      "feature": "EXT_SOURCE_AVAILABLE_COUNT",
+      "mean_absolute_shap": 0.05794717115943786,
+      "mean_signed_shap": -0.004939458640874364,
+      "rank": 9
+    },
+    {
+      "feature": "FLAG_OWN_CAR",
+      "mean_absolute_shap": 0.054804639999056236,
+      "mean_signed_shap": 0.0004157683898229152,
+      "rank": 10
+    },
+    {
+      "feature": "NAME_INCOME_TYPE",
+      "mean_absolute_shap": 0.05287850378066287,
+      "mean_signed_shap": -0.006320849885483767,
+      "rank": 11
+    },
+    {
+      "feature": "EXT_SOURCE_2",
+      "mean_absolute_shap": 0.04909920750290621,
+      "mean_signed_shap": -0.02025917594600469,
+      "rank": 12
+    },
+    {
+      "feature": "NAME_FAMILY_STATUS",
+      "mean_absolute_shap": 0.03673489226406673,
+      "mean_signed_shap": -0.004828763384197373,
+      "rank": 13
+    },
+    {
+      "feature": "EXT_SOURCE_1",
+      "mean_absolute_shap": 0.034038412955400416,
+      "mean_signed_shap": -0.011013380456293817,
+      "rank": 14
+    },
+    {
+      "feature": "ANNUITY_TO_INCOME_RATIO",
+      "mean_absolute_shap": 0.0305064656494651,
+      "mean_signed_shap": 0.0011608795208740048,
+      "rank": 15
+    },
+    {
+      "feature": "NAME_CONTRACT_TYPE",
+      "mean_absolute_shap": 0.026084535254805814,
+      "mean_signed_shap": 0.00012396855902625247,
+      "rank": 16
+    },
+    {
+      "feature": "AMT_CREDIT",
+      "mean_absolute_shap": 0.025101296999317128,
+      "mean_signed_shap": -0.014293228162860033,
+      "rank": 17
+    },
+    {
+      "feature": "NAME_HOUSING_TYPE",
+      "mean_absolute_shap": 0.008317910292113083,
+      "mean_signed_shap": -7.141911757935305e-05,
+      "rank": 18
+    },
+    {
+      "feature": "CREDIT_TO_INCOME_RATIO",
+      "mean_absolute_shap": 0.00812320870012627,
+      "mean_signed_shap": -0.0006210682210803498,
+      "rank": 19
+    },
+    {
+      "feature": "AMT_INCOME_TOTAL",
+      "mean_absolute_shap": 0.00622262146792491,
+      "mean_signed_shap": 0.0004888100622047204,
+      "rank": 20
+    },
+    {
+      "feature": "INCOME_PER_FAMILY_MEMBER",
+      "mean_absolute_shap": 0.004537818646174856,
+      "mean_signed_shap": -0.00019135262991767376,
+      "rank": 21
+    },
+    {
+      "feature": "FLAG_OWN_REALTY",
+      "mean_absolute_shap": 0.003193055260227993,
+      "mean_signed_shap": 8.317610481753945e-06,
+      "rank": 22
+    },
+    {
+      "feature": "CNT_FAM_MEMBERS",
+      "mean_absolute_shap": 0.0013813395568076886,
+      "mean_signed_shap": 0.00014268122772136848,
+      "rank": 23
+    },
+    {
+      "feature": "CNT_CHILDREN",
+      "mean_absolute_shap": 0.0002070741675051977,
+      "mean_signed_shap": 2.8855516145995353e-05,
+      "rank": 24
+    }
+  ]
+}

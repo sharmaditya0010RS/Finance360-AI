@@ -1,0 +1,52 @@
+{
+  "model": "logistic_regression_baseline",
+  "validation_strategy": "stratified_3_fold_training_only",
+  "random_state": 42,
+  "training_rows": 246008,
+  "held_out_test_rows": 61503,
+  "training_positives": 19860,
+  "test_set_evaluated": false,
+  "fold_results": [
+    {
+      "fold": 1,
+      "training_rows": 164005,
+      "validation_rows": 82003,
+      "validation_positives": 6620,
+      "roc_auc": 0.7384856498975043,
+      "average_precision": 0.2159776496024724,
+      "brier_score": 0.06908913223762994
+    },
+    {
+      "fold": 2,
+      "training_rows": 164005,
+      "validation_rows": 82003,
+      "validation_positives": 6620,
+      "roc_auc": 0.742065241215524,
+      "average_precision": 0.22268987862397052,
+      "brier_score": 0.06880672385399876
+    },
+    {
+      "fold": 3,
+      "training_rows": 164006,
+      "validation_rows": 82002,
+      "validation_positives": 6620,
+      "roc_auc": 0.7405130272631136,
+      "average_precision": 0.21849262695946642,
+      "brier_score": 0.06893082288819588
+    }
+  ],
+  "summary": {
+    "roc_auc": {
+      "mean": 0.7403546394587139,
+      "std": 0.0014656474163197955
+    },
+    "average_precision": {
+      "mean": 0.2190533850619698,
+      "std": 0.0027687953874567656
+    },
+    "brier_score": {
+      "mean": 0.0689422263266082,
+      "std": 0.00011557437026149451
+    }
+  }
+}

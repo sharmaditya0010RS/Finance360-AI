@@ -1,0 +1,33 @@
+{
+  "selection_status": "provisional",
+  "selected_model": "xgboost_challenger",
+  "benchmark_model": "logistic_regression_baseline",
+  "selection_rule": "Select XGBoost only if it improves cross-validation ROC-AUC, average precision, and Brier score",
+  "recalibration_status": "not_applied",
+  "recalibration_reason": "Observed calibration differences are small, and high-probability bins have limited sample sizes",
+  "training_rows": 246008,
+  "held_out_test_rows": 61503,
+  "test_set_evaluated": false,
+  "model_metrics": {
+    "logistic_regression_baseline": {
+      "cv_roc_auc": 0.7403546394587139,
+      "cv_average_precision": 0.2190533850619698,
+      "cv_brier_score": 0.0689422263266082,
+      "oof_expected_calibration_error": 0.0008054408587928187
+    },
+    "xgboost_challenger": {
+      "cv_roc_auc": 0.7498894766817482,
+      "cv_average_precision": 0.23124888627555543,
+      "cv_brier_score": 0.0683777704834938,
+      "oof_expected_calibration_error": 0.0013062714669614531
+    }
+  },
+  "limitations": [
+    "Selection uses three stratified cross-validation folds",
+    "Equal-width expected calibration error depends on binning",
+    "Sparse high-risk bins have uncertain observed rates",
+    "No temporal validation is possible with available dates",
+    "TARGET represents recorded repayment difficulty",
+    "No regulatory-grade probability-of-default claim"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "model": "xgboost_challenger",
+  "validation_strategy": "stratified_3_fold_training_only",
+  "random_state": 42,
+  "training_rows": 246008,
+  "held_out_test_rows": 61503,
+  "training_positives": 19860,
+  "test_set_evaluated": false,
+  "fold_results": [
+    {
+      "fold": 1,
+      "training_rows": 164005,
+      "validation_rows": 82003,
+      "validation_positives": 6620,
+      "roc_auc": 0.7478783421522791,
+      "average_precision": 0.22867350564988287,
+      "brier_score": 0.06850234419107437
+    },
+    {
+      "fold": 2,
+      "training_rows": 164005,
+      "validation_rows": 82003,
+      "validation_positives": 6620,
+      "roc_auc": 0.7510597092639469,
+      "average_precision": 0.23231040243448875,
+      "brier_score": 0.06831265240907669
+    },
+    {
+      "fold": 3,
+      "training_rows": 164006,
+      "validation_rows": 82002,
+      "validation_positives": 6620,
+      "roc_auc": 0.7507303786290187,
+      "average_precision": 0.2327627507422947,
+      "brier_score": 0.06831831485033035
+    }
+  ],
+  "summary": {
+    "roc_auc": {
+      "mean": 0.7498894766817482,
+      "std": 0.001428428329433638
+    },
+    "average_precision": {
+      "mean": 0.23124888627555543,
+      "std": 0.0018304086562315241
+    },
+    "brier_score": {
+      "mean": 0.0683777704834938,
+      "std": 8.811724112610481e-05
+    }
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "evaluation": "out_of_fold_probability_calibration",
+  "validation_strategy": "stratified_3_fold_training_only",
+  "training_rows": 246008,
+  "held_out_test_rows": 61503,
+  "test_set_evaluated": false,
+  "models": {
+    "logistic_regression_baseline": {
+      "roc_auc": 0.7403368370054377,
+      "average_precision": 0.21887442735083573,
+      "calibration": {
+        "rows": 246008,
+        "positive_count": 19860,
+        "observed_positive_rate": 0.08072908198107379,
+        "mean_predicted_probability": 0.08075488510676511,
+        "brier_score": 0.06894222637296213,
+        "expected_calibration_error": 0.0008054408587928187,
+        "binning_strategy": "equal_width",
+        "requested_bins": 10,
+        "populated_bins": 9,
+        "bins": [
+          {
+            "bin": 1,
+            "lower_bound": 0.0,
+            "upper_bound": 0.1,
+            "count": 181158,
+            "mean_predicted_probability": 0.04610793821757473,
+            "observed_positive_rate": 0.045794279027147576,
+            "absolute_calibration_gap": 0.00031365919042715407
+          },
+          {
+            "bin": 2,
+            "lower_bound": 0.1,
+            "upper_bound": 0.2,
+            "count": 46692,
+            "mean_predicted_probability": 0.13860145745233332,
+            "observed_positive_rate": 0.14064507838601903,
+            "absolute_calibration_gap": 0.002043620933685708
+          },
+          {
+            "bin": 3,
+            "lower_bound": 0.2,
+            "upper_bound": 0.3,
+            "count": 12962,
+            "mean_predicted_probability": 0.2407431658212761,
+            "observed_positive_rate": 0.23769480018515662,
+            "absolute_calibration_gap": 0.0030483656361194877
+          },
+          {
+            "bin": 4,
+            "lower_bound": 0.3,
+            "upper_bound": 0.4,
+            "count": 3876,
+            "mean_predicted_probability": 0.3395842241527344,
+            "observed_positive_rate": 0.3392672858617131,
+            "absolute_calibration_gap": 0.000316938291021307
+          },
+          {
+            "bin": 5,
+            "lower_bound": 0.4,
+            "upper_bound": 0.5,
+            "count": 1079,
+            "mean_predicted_probability": 0.4388528164163451,
+            "observed_positive_rate": 0.4392956441149212,
+            "absolute_calibration_gap": 0.00044282769857612037
+          },
+          {
+            "bin": 6,
+            "lower_bound": 0.5,
+            "upper_bound": 0.6,
+            "count": 220,
+            "mean_predicted_probability": 0.5343337374820524,
+            "observed_positive_rate": 0.5318181818181819,
+            "absolute_calibration_gap": 0.0025155556638705168
+          },
+          {
+            "bin": 7,
+            "lower_bound": 0.6,
+            "upper_bound": 0.7,
+            "count": 17,
+            "mean_predicted_probability": 0.615908735223481,
+            "observed_positive_rate": 0.5294117647058824,
+            "absolute_calibration_gap": 0.08649697051759864
+          },
+          {
+            "bin": 8,
+            "lower_bound": 0.7,
+            "upper_bound": 0.8,
+            "count": 1,
+            "mean_predicted_probability": 0.7401199826534063,
+            "observed_positive_rate": 0.0,
+            "absolute_calibration_gap": 0.7401199826534063
+          },
+          {
+            "bin": 10,
+            "lower_bound": 0.9,
+            "upper_bound": 1.0,
+            "count": 3,
+            "mean_predicted_probability": 0.9730348430670661,
+            "observed_positive_rate": 0.3333333333333333,
+            "absolute_calibration_gap": 0.6397015097337329
+          }
+        ]
+      }
+    },
+    "xgboost_challenger": {
+      "roc_auc": 0.7498626862826206,
+      "average_precision": 0.23111175345673168,
+      "calibration": {
+        "rows": 246008,
+        "positive_count": 19860,
+        "observed_positive_rate": 0.08072908198107379,
+        "mean_predicted_probability": 0.08065050783877042,
+        "brier_score": 0.06837776802122063,
+        "expected_calibration_error": 0.0013062714669614531,
+        "binning_strategy": "equal_width",
+        "requested_bins": 10,
+        "populated_bins": 8,
+        "bins": [
+          {
+            "bin": 1,
+            "lower_bound": 0.0,
+            "upper_bound": 0.1,
+            "count": 182684,
+            "mean_predicted_probability": 0.0454104901498396,
+            "observed_positive_rate": 0.044886251669549605,
+            "absolute_calibration_gap": 0.0005242384802899916
+          },
+          {
+            "bin": 2,
+            "lower_bound": 0.1,
+            "upper_bound": 0.2,
+            "count": 44364,
+            "mean_predicted_probability": 0.13907788268238985,
+            "observed_positive_rate": 0.14266071589577134,
+            "absolute_calibration_gap": 0.0035828332133814866
+          },
+          {
+            "bin": 3,
+            "lower_bound": 0.2,
+            "upper_bound": 0.3,
+            "count": 13090,
+            "mean_predicted_probability": 0.2407646274047557,
+            "observed_positive_rate": 0.23903743315508022,
+            "absolute_calibration_gap": 0.00172719424967549
+          },
+          {
+            "bin": 4,
+            "lower_bound": 0.3,
+            "upper_bound": 0.4,
+            "count": 4143,
+            "mean_predicted_probability": 0.34043861513778895,
+            "observed_positive_rate": 0.3350229302437847,
+            "absolute_calibration_gap": 0.005415684894004236
+          },
+          {
+            "bin": 5,
+            "lower_bound": 0.4,
+            "upper_bound": 0.5,
+            "count": 1282,
+            "mean_predicted_probability": 0.44077520523446956,
+            "observed_positive_rate": 0.4469578783151326,
+            "absolute_calibration_gap": 0.006182673080663059
+          },
+          {
+            "bin": 6,
+            "lower_bound": 0.5,
+            "upper_bound": 0.6,
+            "count": 368,
+            "mean_predicted_probability": 0.5397451641442983,
+            "observed_positive_rate": 0.5135869565217391,
+            "absolute_calibration_gap": 0.02615820762255916
+          },
+          {
+            "bin": 7,
+            "lower_bound": 0.6,
+            "upper_bound": 0.7,
+            "count": 72,
+            "mean_predicted_probability": 0.6324090311924616,
+            "observed_positive_rate": 0.6805555555555556,
+            "absolute_calibration_gap": 0.04814652436309397
+          },
+          {
+            "bin": 8,
+            "lower_bound": 0.7,
+            "upper_bound": 0.8,
+            "count": 5,
+            "mean_predicted_probability": 0.7138647079467774,
+            "observed_positive_rate": 0.6,
+            "absolute_calibration_gap": 0.11386470794677739
+          }
+        ]
+      }
+    }
+  }
+}
