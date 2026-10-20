@@ -21,3 +21,4 @@ artifacts/
 *.xlsx
 *.pbix
 .vscode/
+*.egg-info/
