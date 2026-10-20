@@ -1,9 +1,8 @@
-from pathlib import Path
 import hashlib
 import json
+from pathlib import Path
 
 import pandas as pd
-
 
 SOURCE_COLUMNS = [
     "SK_ID_CURR",
