@@ -7,7 +7,6 @@ import pandas as pd
 from finance360.database.connection import get_connection
 from finance360.ingestion.home_credit import SOURCE_COLUMNS
 
-
 EXPECTED_ROWS = 307511
 EXPECTED_COLUMNS = 36
 EXPECTED_POSITIVE_TARGETS = 24825
