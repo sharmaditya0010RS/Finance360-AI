@@ -1,0 +1,6 @@
+pyproject.toml
+src/finance360_ai.egg-info/PKG-INFO
+src/finance360_ai.egg-info/SOURCES.txt
+src/finance360_ai.egg-info/dependency_links.txt
+src/finance360_ai.egg-info/requires.txt
+src/finance360_ai.egg-info/top_level.txt
