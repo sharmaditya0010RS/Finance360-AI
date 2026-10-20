@@ -1,0 +1,133 @@
+{
+  "comparison_type": "non_temporal_training_oof_demonstration",
+  "reference_group": "deterministic_group_0",
+  "comparison_group": "deterministic_group_1",
+  "reference_count": 123004,
+  "comparison_count": 123004,
+  "reference_mean_score": 0.08069109684769299,
+  "comparison_mean_score": 0.08060991882984786,
+  "psi_result": {
+    "metric": "population_stability_index",
+    "reference_count": 123004,
+    "comparison_count": 123004,
+    "binning_strategy": "fixed_probability_bins",
+    "smoothing_floor": 1e-06,
+    "psi": 5.933737280798928e-05,
+    "bins": [
+      {
+        "bin": 1,
+        "lower_bound": 0.0,
+        "upper_bound": 0.1,
+        "reference_count": 91338,
+        "comparison_count": 91346,
+        "reference_share": 0.7425612175213814,
+        "comparison_share": 0.7426262560567136,
+        "psi_contribution": 5.69626549660677e-09
+      },
+      {
+        "bin": 2,
+        "lower_bound": 0.1,
+        "upper_bound": 0.2,
+        "reference_count": 22124,
+        "comparison_count": 22240,
+        "reference_share": 0.17986406946115574,
+        "comparison_share": 0.18080712822347242,
+        "psi_contribution": 4.9317043429011325e-06
+      },
+      {
+        "bin": 3,
+        "lower_bound": 0.2,
+        "upper_bound": 0.30000000000000004,
+        "reference_count": 6551,
+        "comparison_count": 6539,
+        "reference_share": 0.05325843062014243,
+        "comparison_share": 0.053160872817144156,
+        "psi_contribution": 1.7886844368642248e-07
+      },
+      {
+        "bin": 4,
+        "lower_bound": 0.30000000000000004,
+        "upper_bound": 0.4,
+        "reference_count": 2095,
+        "comparison_count": 2048,
+        "reference_share": 0.01703196644011577,
+        "comparison_share": 0.016649865045039184,
+        "psi_contribution": 8.669821885885639e-06
+      },
+      {
+        "bin": 5,
+        "lower_bound": 0.4,
+        "upper_bound": 0.5,
+        "reference_count": 663,
+        "comparison_count": 619,
+        "reference_share": 0.005390068615654776,
+        "comparison_share": 0.005032356671327762,
+        "psi_contribution": 2.4563978163764842e-05
+      },
+      {
+        "bin": 6,
+        "lower_bound": 0.5,
+        "upper_bound": 0.6000000000000001,
+        "reference_count": 194,
+        "comparison_count": 174,
+        "reference_share": 0.0015771844818054698,
+        "comparison_share": 0.001414588143475009,
+        "psi_contribution": 1.7690946611297037e-05
+      },
+      {
+        "bin": 7,
+        "lower_bound": 0.6000000000000001,
+        "upper_bound": 0.7000000000000001,
+        "reference_count": 36,
+        "comparison_count": 36,
+        "reference_share": 0.00029267340899482945,
+        "comparison_share": 0.00029267340899482945,
+        "psi_contribution": 0.0
+      },
+      {
+        "bin": 8,
+        "lower_bound": 0.7000000000000001,
+        "upper_bound": 0.8,
+        "reference_count": 3,
+        "comparison_count": 2,
+        "reference_share": 2.438945074956912e-05,
+        "comparison_share": 1.6259633833046078e-05,
+        "psi_contribution": 3.2963570949575986e-06
+      },
+      {
+        "bin": 9,
+        "lower_bound": 0.8,
+        "upper_bound": 0.9,
+        "reference_count": 0,
+        "comparison_count": 0,
+        "reference_share": 0.0,
+        "comparison_share": 0.0,
+        "psi_contribution": 0.0
+      },
+      {
+        "bin": 10,
+        "lower_bound": 0.9,
+        "upper_bound": 1.0,
+        "reference_count": 0,
+        "comparison_count": 0,
+        "reference_share": 0.0,
+        "comparison_share": 0.0,
+        "psi_contribution": 0.0
+      }
+    ],
+    "interpretation": "PSI measures score-distribution differences and does not establish a cause or prove model performance deterioration."
+  },
+  "production_drift_claim": false,
+  "model": "xgboost_challenger",
+  "training_rows": 246008,
+  "held_out_test_rows": 61503,
+  "random_state": 42,
+  "grouping_method": "seeded_random_half_split",
+  "test_set_evaluated": false,
+  "limitations": [
+    "This comparison uses random subsets of training OOF scores.",
+    "The dataset does not provide application event dates.",
+    "The PSI result is not evidence of production or temporal drift.",
+    "A real monitoring process requires future scored populations."
+  ]
+}

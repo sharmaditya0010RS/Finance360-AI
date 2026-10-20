@@ -1,0 +1,73 @@
+{
+  "application_count": 246008,
+  "positive_count": 19860,
+  "total_requested_credit": 147442004050.5,
+  "risk_band_boundaries": [
+    0.054748719558119774,
+    0.10213799774646759,
+    0.17777232974767695
+  ],
+  "segments": [
+    {
+      "risk_band": "Low",
+      "application_count": 123004,
+      "application_share": 0.5,
+      "positive_count": 3724,
+      "observed_difficulty_rate": 0.030275438197131802,
+      "total_requested_credit": 78863828328.0,
+      "requested_credit_share": 0.534880333700487,
+      "average_requested_credit": 641148.4856427433,
+      "mean_predicted_probability": 0.031529435353278255
+    },
+    {
+      "risk_band": "Moderate",
+      "application_count": 61502,
+      "application_share": 0.25,
+      "positive_count": 4680,
+      "observed_difficulty_rate": 0.07609508633865565,
+      "total_requested_credit": 35892393817.5,
+      "requested_credit_share": 0.24343397967655528,
+      "average_requested_credit": 583597.1808640369,
+      "mean_predicted_probability": 0.07482198256520615
+    },
+    {
+      "risk_band": "High",
+      "application_count": 36901,
+      "application_share": 0.14999918701830836,
+      "positive_count": 5017,
+      "observed_difficulty_rate": 0.1359583751117856,
+      "total_requested_credit": 20236194472.5,
+      "requested_credit_share": 0.1372485039308673,
+      "average_requested_credit": 548391.4927102247,
+      "mean_predicted_probability": 0.13341255841146224
+    },
+    {
+      "risk_band": "Very High",
+      "application_count": 24601,
+      "application_share": 0.10000081298169165,
+      "positive_count": 6439,
+      "observed_difficulty_rate": 0.2617373277509044,
+      "total_requested_credit": 12449587432.5,
+      "requested_credit_share": 0.0844371826920904,
+      "average_requested_credit": 506060.2183854315,
+      "mean_predicted_probability": 0.26168306477537173
+    }
+  ],
+  "high_and_very_high": {
+    "application_count": 61502,
+    "application_share": 0.25,
+    "total_requested_credit": 32685781905.0,
+    "requested_credit_share": 0.22168568662295768
+  },
+  "model": "xgboost_challenger",
+  "population": "training_only_out_of_fold",
+  "held_out_test_rows": 61503,
+  "test_set_evaluated": false,
+  "exposure_definition": "original_requested_credit_amount",
+  "limitations": [
+    "Requested credit is not actual outstanding exposure or EAD.",
+    "Source currency units are not established.",
+    "Training OOF segments are not production monitoring results.",
+    "No held-out test outcomes were used in this analysis."
+  ]
+}

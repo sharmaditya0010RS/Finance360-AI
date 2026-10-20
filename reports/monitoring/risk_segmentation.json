@@ -1,0 +1,69 @@
+{
+  "method": "training_oof_score_quantiles",
+  "quantiles": [
+    0.5,
+    0.75,
+    0.9
+  ],
+  "boundaries": [
+    0.054748719558119774,
+    0.10213799774646759,
+    0.17777232974767695
+  ],
+  "training_rows": 246008,
+  "training_positives": 19860,
+  "segments": [
+    {
+      "risk_band": "Low",
+      "application_count": 123004,
+      "portfolio_share": 0.5,
+      "positive_count": 3724,
+      "observed_difficulty_rate": 0.030275438197131802,
+      "mean_predicted_probability": 0.031529435353278255,
+      "minimum_predicted_probability": 0.0033741069491952658,
+      "maximum_predicted_probability": 0.05474860221147537
+    },
+    {
+      "risk_band": "Moderate",
+      "application_count": 61502,
+      "portfolio_share": 0.25,
+      "positive_count": 4680,
+      "observed_difficulty_rate": 0.07609508633865565,
+      "mean_predicted_probability": 0.07482198256520615,
+      "minimum_predicted_probability": 0.054748836904764175,
+      "maximum_predicted_probability": 0.1021379604935646
+    },
+    {
+      "risk_band": "High",
+      "application_count": 36901,
+      "portfolio_share": 0.14999918701830836,
+      "positive_count": 5017,
+      "observed_difficulty_rate": 0.1359583751117856,
+      "mean_predicted_probability": 0.13341255841146224,
+      "minimum_predicted_probability": 0.10213810950517654,
+      "maximum_predicted_probability": 0.17777064442634583
+    },
+    {
+      "risk_band": "Very High",
+      "application_count": 24601,
+      "portfolio_share": 0.10000081298169165,
+      "positive_count": 6439,
+      "observed_difficulty_rate": 0.2617373277509044,
+      "mean_predicted_probability": 0.26168306477537173,
+      "minimum_predicted_probability": 0.1777762621641159,
+      "maximum_predicted_probability": 0.7241350412368774
+    }
+  ],
+  "model": "xgboost_challenger",
+  "validation_strategy": "stratified_3_fold_training_only",
+  "random_state": 42,
+  "held_out_test_rows": 61503,
+  "test_set_evaluated": false,
+  "interpretation": "Relative repayment-difficulty risk segments based on training-only out-of-fold predicted probabilities.",
+  "limitations": [
+    "Risk bands are descriptive and not regulatory credit grades.",
+    "Observed difficulty rates are training OOF estimates.",
+    "No held-out test outcomes were used to define boundaries.",
+    "Score quantiles do not imply equal business exposure."
+  ]
+}
