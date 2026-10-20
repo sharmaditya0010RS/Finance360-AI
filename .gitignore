@@ -23,3 +23,5 @@ reports/data_quality/
 *.xlsx
 *.pbix
 .vscode/
+
+*.bak
