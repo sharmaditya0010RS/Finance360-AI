@@ -14,6 +14,8 @@ data/silver/
 data/gold/
 data/external/
 artifacts/
+reports/data_quality/
+*.egg-info/
 *.pkl
 *.joblib
 *.parquet
@@ -21,4 +23,3 @@ artifacts/
 *.xlsx
 *.pbix
 .vscode/
-*.egg-info/
