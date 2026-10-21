@@ -26,22 +26,7 @@ Requested credit is an application amount, **not confirmed disbursement**. Monet
 
 Python 3.12, pandas, NumPy, PyArrow, PostgreSQL, psycopg, SQLAlchemy, scikit-learn, XGBoost, SHAP, Plotly, Streamlit, Power BI, pytest and Ruff.
 
-## Repository layout
 
-```text
-Finance360-AI/
-â”œâ”€â”€ app/                   # Streamlit entry point and pages
-â”œâ”€â”€ src/finance360/        # Data, modeling, monitoring and dashboard modules
-â”œâ”€â”€ sql/                   # Warehouse and analytics SQL
-â”œâ”€â”€ tests/                 # Automated tests
-â”œâ”€â”€ configs/               # Project configuration
-â”œâ”€â”€ reports/               # Generated evaluation and monitoring outputs
-â”œâ”€â”€ powerbi/               # Power BI report (check repository tracking policy)
-â”œâ”€â”€ presentation/          # Presentation materials
-â”œâ”€â”€ data/                  # Local datasets (typically excluded from Git)
-â”œâ”€â”€ artifacts/             # Local trained model files (typically excluded)
-â”œâ”€â”€ .env.example           # Environment variable template
-â””â”€â”€ pyproject.toml         # Dependencies and development configuration
 ```
 
 ## Local setup (Windows PowerShell)
@@ -56,7 +41,7 @@ python -m pip install --upgrade pip
 python -m pip install -e ".[dev]"
 
 # Create local environment files using the supplied template.
-# Do not commit passwords, connection strings, or secrets.
+# Do not commit passwords, connection strings or secrets.
 Copy-Item .env.example .env
 
 # Run automated tests
