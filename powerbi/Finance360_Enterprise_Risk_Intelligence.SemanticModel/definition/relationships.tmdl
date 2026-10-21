@@ -1,0 +1,30 @@
+relationship 10dabc65-0610-56bf-9fd2-5d9550d1572f
+	fromColumn: FactCreditApplication.contract_type_key
+	toColumn: DimContractType.contract_type_key
+
+	annotation PBI_IsFromSource = FS
+
+relationship f00ccf60-27f6-906c-55dd-7cdf6844d2c0
+	fromColumn: FactCreditApplication.income_type_key
+	toColumn: DimIncomeType.income_type_key
+
+	annotation PBI_IsFromSource = FS
+
+relationship 13ee7f49-735c-55e3-0cf5-26c00ae76976
+	fromColumn: FactCreditApplication.education_key
+	toColumn: DimEducation.education_key
+
+	annotation PBI_IsFromSource = FS
+
+relationship a162751a-f5cf-727e-e9f6-b6bfc9d532d3
+	fromColumn: FactCreditApplication.housing_key
+	toColumn: DimHousing.housing_key
+
+	annotation PBI_IsFromSource = FS
+
+relationship 85321213-0efe-8233-2b42-962da4d397cb
+	fromColumn: FactCreditApplication.family_status_key
+	toColumn: DimFamilyStatus.family_status_key
+
+	annotation PBI_IsFromSource = FS
+

@@ -1,0 +1,100 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 250.23377489521772,
+            "y": 104.19581794775581
+          },
+          "nodeIndex": "FactCreditApplication",
+          "nodeLineageTag": "f5be5bd9-f1e8-4111-a6f0-e621b4499909",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "DimContractType",
+          "nodeLineageTag": "fdd5678f-2d1d-4e3f-9a44-6de24a80b6da",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 527.03679452539438,
+            "y": 318.18917920239903
+          },
+          "nodeIndex": "DimIncomeType",
+          "nodeLineageTag": "2d885218-9426-48e2-a0de-776d28621b33",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 511.86514386607337,
+            "y": 0
+          },
+          "nodeIndex": "DimEducation",
+          "nodeLineageTag": "4a283c44-e69a-47f0-a720-ad359f7efded",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 670.13475811444982,
+            "y": 162.3818816168382
+          },
+          "nodeIndex": "DimHousing",
+          "nodeLineageTag": "229eedd7-7f31-42fa-8691-2a36dcedeed2",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 281
+          },
+          "nodeIndex": "DimFamilyStatus",
+          "nodeLineageTag": "489c41b7-0390-479a-a4dc-a3f869ecdefd",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

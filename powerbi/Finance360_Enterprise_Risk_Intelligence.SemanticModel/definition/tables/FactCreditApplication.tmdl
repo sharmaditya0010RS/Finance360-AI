@@ -1,0 +1,353 @@
+table FactCreditApplication
+	lineageTag: f5be5bd9-f1e8-4111-a6f0-e621b4499909
+
+	column sk_id_curr
+		dataType: int64
+		formatString: 0
+		lineageTag: 4d4210cb-d2aa-4726-9a70-7cd1705ae101
+		summarizeBy: sum
+		sourceColumn: sk_id_curr
+
+		annotation SummarizationSetBy = Automatic
+
+	column contract_type_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 1c544f50-8e46-4431-bef2-6d4bffbd1227
+		summarizeBy: none
+		sourceColumn: contract_type_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column income_type_key
+		dataType: int64
+		formatString: 0
+		lineageTag: e2ae2742-bf44-4bf3-88ae-ce1675cc4d8c
+		summarizeBy: none
+		sourceColumn: income_type_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column education_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 59070f30-86f5-4efa-b7c0-b3c6907653ea
+		summarizeBy: none
+		sourceColumn: education_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column housing_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 384ab3e7-e4d8-4f53-b697-0badea32250c
+		summarizeBy: none
+		sourceColumn: housing_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column family_status_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 708e31ef-7d0c-47e1-88f6-b9c63717e302
+		summarizeBy: none
+		sourceColumn: family_status_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column target
+		dataType: int64
+		formatString: 0
+		lineageTag: c0ad8eb7-6fe3-48d9-97a2-f9fdd2aef4b1
+		summarizeBy: sum
+		sourceColumn: target
+
+		annotation SummarizationSetBy = Automatic
+
+	column amt_income_total
+		dataType: double
+		lineageTag: 89d6642e-9016-4b24-8f8c-afea8e143999
+		summarizeBy: sum
+		sourceColumn: amt_income_total
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column amt_credit
+		dataType: double
+		lineageTag: 829e5e06-0418-40eb-96db-24787d5ecd63
+		summarizeBy: sum
+		sourceColumn: amt_credit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column amt_annuity
+		dataType: double
+		lineageTag: 04813541-d6d3-49fc-a8d2-da27fa7d1f62
+		summarizeBy: sum
+		sourceColumn: amt_annuity
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column amt_goods_price
+		dataType: double
+		lineageTag: 86955965-1b93-45cf-93e8-061b3962e2e9
+		summarizeBy: sum
+		sourceColumn: amt_goods_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column days_birth
+		dataType: int64
+		formatString: 0
+		lineageTag: d934b4af-1b35-4ba8-a029-96900134ad82
+		summarizeBy: sum
+		sourceColumn: days_birth
+
+		annotation SummarizationSetBy = Automatic
+
+	column days_employed
+		dataType: int64
+		formatString: 0
+		lineageTag: e21f2273-31f3-4fc3-81c3-09ab963eb10f
+		summarizeBy: sum
+		sourceColumn: days_employed
+
+		annotation SummarizationSetBy = Automatic
+
+	column cnt_children
+		dataType: int64
+		formatString: 0
+		lineageTag: 958a7bd0-62c7-49a1-b73f-10bd73cdc273
+		summarizeBy: sum
+		sourceColumn: cnt_children
+
+		annotation SummarizationSetBy = Automatic
+
+	column cnt_fam_members
+		dataType: double
+		lineageTag: e4398127-4ecb-447b-8ca9-d9de8763d5a3
+		summarizeBy: sum
+		sourceColumn: cnt_fam_members
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column flag_own_car
+		dataType: string
+		lineageTag: 2028061f-c9cc-47c2-a9b1-aa975c0f1ae7
+		summarizeBy: none
+		sourceColumn: flag_own_car
+
+		annotation SummarizationSetBy = Automatic
+
+	column flag_own_realty
+		dataType: string
+		lineageTag: a3e00305-bf55-43e5-8fcc-809a2c3a9a56
+		summarizeBy: none
+		sourceColumn: flag_own_realty
+
+		annotation SummarizationSetBy = Automatic
+
+	column ext_source_1
+		dataType: double
+		lineageTag: 71e695b8-d39d-4d66-948c-e6c82d3bd553
+		summarizeBy: sum
+		sourceColumn: ext_source_1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ext_source_2
+		dataType: double
+		lineageTag: 7eee1196-92f9-45e9-8a03-d4cacab089d5
+		summarizeBy: sum
+		sourceColumn: ext_source_2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ext_source_3
+		dataType: double
+		lineageTag: 8d9c8fb5-3cca-484b-a1ff-045b6f584432
+		summarizeBy: sum
+		sourceColumn: ext_source_3
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column employment_sentinel_flag
+		dataType: int64
+		formatString: 0
+		lineageTag: 951c24a4-5b11-4155-a4fc-86b1cd390593
+		summarizeBy: sum
+		sourceColumn: employment_sentinel_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column age_years
+		dataType: double
+		lineageTag: ae0429c2-0470-4306-a865-b263aa11f56a
+		summarizeBy: sum
+		sourceColumn: age_years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column employment_years
+		dataType: double
+		lineageTag: 282c8dfa-5667-4778-8236-33560237bf49
+		summarizeBy: sum
+		sourceColumn: employment_years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column age_invalid_flag
+		dataType: int64
+		formatString: 0
+		lineageTag: c7e80178-ebf9-44f5-9ae9-158e398a9087
+		summarizeBy: sum
+		sourceColumn: age_invalid_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column employment_invalid_flag
+		dataType: int64
+		formatString: 0
+		lineageTag: eded58bf-d03f-42be-ba57-bcce3ec4b084
+		summarizeBy: sum
+		sourceColumn: employment_invalid_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column income_invalid_flag
+		dataType: int64
+		formatString: 0
+		lineageTag: d797a638-ae0c-4cf2-b682-641cb49e8c80
+		summarizeBy: sum
+		sourceColumn: income_invalid_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column credit_invalid_flag
+		dataType: int64
+		formatString: 0
+		lineageTag: 31c472e6-55ce-4b30-a5ee-71a904dcb862
+		summarizeBy: sum
+		sourceColumn: credit_invalid_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column annuity_invalid_flag
+		dataType: int64
+		formatString: 0
+		lineageTag: c6966fb7-5695-40c7-8c39-0cabee6ed888
+		summarizeBy: sum
+		sourceColumn: annuity_invalid_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column credit_to_income_ratio
+		dataType: double
+		lineageTag: 8047d6a0-1f45-4e1c-901d-7f0b2915ee26
+		summarizeBy: sum
+		sourceColumn: credit_to_income_ratio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column annuity_to_income_ratio
+		dataType: double
+		lineageTag: c53d1e3b-bb32-44cd-970e-e30408db7ba4
+		summarizeBy: sum
+		sourceColumn: annuity_to_income_ratio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column credit_to_goods_ratio
+		dataType: double
+		lineageTag: 2911f8b5-5d2e-4bcb-8ea9-495209b3f75b
+		summarizeBy: sum
+		sourceColumn: credit_to_goods_ratio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column income_per_family_member
+		dataType: double
+		lineageTag: 58c12954-5073-44db-86be-bc35084ca3b0
+		summarizeBy: sum
+		sourceColumn: income_per_family_member
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ext_source_available_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 9f7e554e-7c7a-4409-bad8-db4961b5b651
+		summarizeBy: sum
+		sourceColumn: ext_source_available_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column ext_source_mean
+		dataType: double
+		lineageTag: 7ff6224b-fabb-42bf-b6df-782338358ffc
+		summarizeBy: sum
+		sourceColumn: ext_source_mean
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ext_source_invalid_flag
+		dataType: int64
+		formatString: 0
+		lineageTag: 71a29e0f-39bd-4dcb-b4f5-2c153945dfdd
+		summarizeBy: sum
+		sourceColumn: ext_source_invalid_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column financial_data_quality_flag
+		dataType: int64
+		formatString: 0
+		lineageTag: 5e516f2d-2a32-4c19-a26d-bbb1f6cd4a1d
+		summarizeBy: sum
+		sourceColumn: financial_data_quality_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactCreditApplication = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost", "finance360"),
+				    warehouse_fact_credit_application = Source{[Schema="warehouse",Item="fact_credit_application"]}[Data]
+				in
+				    warehouse_fact_credit_application
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

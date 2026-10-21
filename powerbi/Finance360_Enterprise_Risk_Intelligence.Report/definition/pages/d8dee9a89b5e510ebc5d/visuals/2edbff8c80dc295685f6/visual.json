@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "2edbff8c80dc295685f6",
+  "position": {
+    "x": 0,
+    "y": 80,
+    "z": 9000,
+    "height": 48.000000000000007,
+    "width": 624,
+    "tabOrder": 9000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "   Enterprise Credit Risk Intelligence | Historical Application Portfolio",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#a8b9cf"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

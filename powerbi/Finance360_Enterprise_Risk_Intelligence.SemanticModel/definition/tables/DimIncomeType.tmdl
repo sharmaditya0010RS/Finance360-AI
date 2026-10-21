@@ -1,0 +1,33 @@
+table DimIncomeType
+	lineageTag: 2d885218-9426-48e2-a0de-776d28621b33
+
+	column income_type_key
+		dataType: int64
+		formatString: 0
+		lineageTag: b7d0fb2f-bd5d-4fc1-b075-8d917282bb79
+		summarizeBy: none
+		sourceColumn: income_type_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column income_type_name
+		dataType: string
+		lineageTag: e0c1a0d1-c456-4f03-a3f5-d6760e681c47
+		summarizeBy: none
+		sourceColumn: income_type_name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimIncomeType = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost", "finance360"),
+				    warehouse_dim_income_type = Source{[Schema="warehouse",Item="dim_income_type"]}[Data]
+				in
+				    warehouse_dim_income_type
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,33 @@
+table DimFamilyStatus
+	lineageTag: 489c41b7-0390-479a-a4dc-a3f869ecdefd
+
+	column family_status_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 11627549-4792-4d55-bbd5-f4ef9f25ace2
+		summarizeBy: none
+		sourceColumn: family_status_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column family_status_name
+		dataType: string
+		lineageTag: d88e19fd-f50b-49f2-a304-c63e440999d2
+		summarizeBy: none
+		sourceColumn: family_status_name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimFamilyStatus = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost", "finance360"),
+				    warehouse_dim_family_status = Source{[Schema="warehouse",Item="dim_family_status"]}[Data]
+				in
+				    warehouse_dim_family_status
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

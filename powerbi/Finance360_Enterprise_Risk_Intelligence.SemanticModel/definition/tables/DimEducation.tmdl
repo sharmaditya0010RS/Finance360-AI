@@ -1,0 +1,33 @@
+table DimEducation
+	lineageTag: 4a283c44-e69a-47f0-a720-ad359f7efded
+
+	column education_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 1e90a82e-bcd6-46f7-b7cb-97735abd56b5
+		summarizeBy: none
+		sourceColumn: education_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column education_name
+		dataType: string
+		lineageTag: afd15d86-1bba-4d33-842a-5a9e757de0e7
+		summarizeBy: none
+		sourceColumn: education_name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimEducation = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost", "finance360"),
+				    warehouse_dim_education = Source{[Schema="warehouse",Item="dim_education"]}[Data]
+				in
+				    warehouse_dim_education
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

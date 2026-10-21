@@ -1,0 +1,202 @@
+table DimContractType
+	lineageTag: fdd5678f-2d1d-4e3f-9a44-6de24a80b6da
+
+	measure 'Total Applications' =
+			
+			COUNTROWS(FactCreditApplication)
+		formatString: 0.00
+		lineageTag: 372794b0-83ae-46d0-9e9d-65b9c5e4ade6
+
+	measure 'Repayment Difficulty Applications' =
+			
+			CALCULATE(
+			    [Total Applications],
+			    FactCreditApplication[target] = 1
+			)
+		formatString: 0.000
+		lineageTag: 4d2a3155-ec83-4bb0-b0c0-7caab55ed01b
+
+	measure 'Repayment Difficulty Rate' =
+			
+			DIVIDE(
+			    [Repayment Difficulty Applications],
+			    [Total Applications],
+			    0
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: d8ff7ea5-03c6-40f2-a5d2-020e9f0bb5dc
+
+	measure 'Total Requested Credit' =
+			
+			SUM(FactCreditApplication[amt_credit])
+		lineageTag: 6b4195a2-945d-47b9-a7bc-84f7037efb29
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Average Requested Credit' =
+			
+			AVERAGE(FactCreditApplication[amt_credit])
+		lineageTag: 6e3a6c5c-e833-417d-a818-b49c026482cc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Reported Income' =
+			
+			SUM(FactCreditApplication[amt_income_total])
+		lineageTag: 5020fbb1-5ff5-4bf0-93b0-a0f2b5c082ac
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Average Credit to Income Ratio' =
+			
+			AVERAGE(FactCreditApplication[credit_to_income_ratio])
+		lineageTag: 4f573760-7655-4961-91d8-c1648dda9aea
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'No Difficulty Applications' =
+			
+			CALCULATE(
+			    [Total Applications],
+			    FactCreditApplication[target] = 0
+			)
+		formatString: 0
+		lineageTag: 4e04a8d6-59e2-4245-96ea-026f21454c90
+
+	measure 'No Difficulty Rate' =
+			
+			DIVIDE(
+			    [No Difficulty Applications],
+			    [Total Applications],
+			    0
+			)
+		lineageTag: 7d575be7-b882-4d90-8f81-70fab837dc77
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Average Annuity' =
+			
+			AVERAGE(FactCreditApplication[amt_annuity])
+		lineageTag: 6bfc533a-ea66-4230-b8e5-b9c114ba62c9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Average Annuity to Income Ratio' =
+			
+			AVERAGE(FactCreditApplication[annuity_to_income_ratio])
+		lineageTag: 7772f386-2142-4ac2-804b-57a8a8f7d7f5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Average Applicant Age' =
+			
+			AVERAGE(FactCreditApplication[age_years])
+		lineageTag: b13083ef-afa3-46e9-bee8-6f5a6ce868f4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Average Employment Years' =
+			
+			AVERAGE(FactCreditApplication[employment_years])
+		lineageTag: 21b272c8-adde-4b81-80b5-a4ba6164cd91
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Average External Source Score' =
+			
+			AVERAGE(FactCreditApplication[ext_source_mean])
+		lineageTag: 70c82663-40fa-4d85-9652-9ca5f7efb247
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Repayment Difficulty Share' =
+			
+			DIVIDE(
+			    [Repayment Difficulty Applications],
+			    CALCULATE(
+			        [Repayment Difficulty Applications],
+			        ALLSELECTED(DimIncomeType[income_type_name])
+			    ),
+			    0
+			)
+		lineageTag: 3f5dc28b-e252-4818-81f8-572a51d07f6c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Employment Sentinel Applications' =
+			
+			CALCULATE(
+			    [Total Applications],
+			    FactCreditApplication[employment_sentinel_flag] = 1
+			)
+		formatString: 0
+		lineageTag: 9a093da8-5f84-4837-ada5-9402993fbc60
+
+	measure 'Employment Sentinel Rate' =
+			
+			DIVIDE(
+			    [Employment Sentinel Applications],
+			    [Total Applications],
+			    0
+			)
+		lineageTag: 40b64287-9227-4cb2-8fbf-a97066dd4a61
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Financial Quality Flagged Applications' =
+			
+			CALCULATE(
+			    [Total Applications],
+			    FactCreditApplication[financial_data_quality_flag] = 1
+			)
+		formatString: 0
+		lineageTag: 4652ee35-c155-41e6-8af1-968d913caf09
+
+	measure 'Financial Quality Flag Rate' =
+			
+			DIVIDE(
+			    [Financial Quality Flagged Applications],
+			    [Total Applications],
+			    0
+			)
+		lineageTag: bebcb3a4-c443-4298-9529-3e82fdf8279d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Clean Financial Quality Rate' =
+			
+			1 - [Financial Quality Flag Rate]
+		lineageTag: 9e618424-5164-4a7f-890a-77856b0d0afc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column contract_type_key
+		dataType: int64
+		formatString: 0
+		lineageTag: cd6ea061-7cda-40f8-a38a-273900b1b8b4
+		summarizeBy: none
+		sourceColumn: contract_type_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column contract_type_name
+		dataType: string
+		lineageTag: 32df5a7e-36fa-48fa-a72d-b207009c98a4
+		summarizeBy: none
+		sourceColumn: contract_type_name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimContractType = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost", "finance360"),
+				    warehouse_dim_contract_type = Source{[Schema="warehouse",Item="dim_contract_type"]}[Data]
+				in
+				    warehouse_dim_contract_type
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

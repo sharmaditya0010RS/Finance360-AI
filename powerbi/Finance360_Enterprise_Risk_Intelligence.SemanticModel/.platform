@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Finance360_Enterprise_Risk_Intelligence"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "023aaa4b-46d6-41bd-91b7-d4cbf0105ff1"
+  }
+}

@@ -1,0 +1,33 @@
+table DimHousing
+	lineageTag: 229eedd7-7f31-42fa-8691-2a36dcedeed2
+
+	column housing_key
+		dataType: int64
+		formatString: 0
+		lineageTag: cf17f9a4-1628-4b92-a853-03ca7960c060
+		summarizeBy: none
+		sourceColumn: housing_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column housing_name
+		dataType: string
+		lineageTag: 78f2a83b-5b1c-4bf4-b5c9-5404aff818a6
+		summarizeBy: none
+		sourceColumn: housing_name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimHousing = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost", "finance360"),
+				    warehouse_dim_housing = Source{[Schema="warehouse",Item="dim_housing"]}[Data]
+				in
+				    warehouse_dim_housing
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

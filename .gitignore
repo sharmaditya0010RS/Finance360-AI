@@ -8,6 +8,7 @@ __pycache__/
 htmlcov/
 .env
 .env.*
+.env.database
 !.env.example
 data/bronze/
 data/silver/
@@ -25,3 +26,12 @@ reports/data_quality/
 .vscode/
 
 *.bak
+# Power BI local cache and user-specific settings
+**/.pbi/
+**/cache.abf
+**/localSettings.json
+**/editorSettings.json
+
+# Temporary Power BI files
+*.pbit
+*.tmp
